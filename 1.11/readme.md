@@ -17,8 +17,8 @@ function Admin::changeMissionMenu( %clientId )
   if( $MList::TypeCount < 2 ) $TypeStart = 0;
   else $TypeStart = 1;
   for( %type = $TypeStart; %type < $MLIST::TypeCount; %type++ )
-    if( $MLIST::Type[%type] != "Training" )
-      Client::addMenuItem( %clientId, $MLIST::Type[%type], %type @ " 0") ;
+    if( $MLIST::Type[ %type ] != "Training" )
+      Client::addMenuItem( %clientId, $MLIST::Type[ %type ], %type @ " 0") ;
 }
 ```
 This will generate a paging menu when there are more than 8 mission types available on the server.
